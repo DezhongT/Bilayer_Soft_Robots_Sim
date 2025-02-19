@@ -1,4 +1,17 @@
-g++ -I /usr/include/eigen3/ -I /opt/intel/oneapi/mkl/2025.0/include/ main.cpp world.cpp setInput.cpp timeStepper.cpp inertialForce.cpp externalGravityForce.cpp dampingForce.cpp elasticStretchingForce.cpp elasticBendingForce.cpp elasticTwistingForce.cpp elasticPlate.cpp elasticStretchingBound.cpp elasticAngleBound.cpp elasticBendingBound.cpp elasticTwistingBound.cpp externalContactForceBody.cpp -lGL -lglut -lGLU -L /opt/intel/oneapi/mkl/2025.0/lib -Wl,--no-as-needed -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -L /opt/intel/oneapi/compiler/2025.0/lib -liomp5 -llapack -lgfortran -fopenmp -lpthread -lm -Ofast -o simDER
-
-
+1.
+```bash
 export LD_LIBRARY_PATH=/opt/intel/oneapi/mkl/2025.0/lib/intel64:/opt/intel/oneapi/compiler/2025.0/lib/:$LD_LIBRARY_PATH
+```
+
+2. Configure the simulation engine
+   ```bash
+   mkdir build && cd build
+   cmake ..
+   make -j4
+   cd ..
+   ```
+
+3. To simulate the bilayer robot with customized setting parameters, run
+   ```bash
+   ./simDER ./option.txt
+   ```
