@@ -85,10 +85,6 @@ This study introduces a novel simulation framework based on the Discrete Elastic
     Look for the folder named `mkl`, for example `/opt/intel/oneapi/mkl/2025.0`.
   - Set the MKL environment variable:
     ```bash
-    export MKLROOT=/opt/intel/oneapi/mkl/2022.0.2   # for older versions
-    ```
-    or
-    ```bash
     export MKL_DIR=/opt/intel/oneapi/mkl/2025.0     # for newer versions
     ```
   - Add the above corresponding environment variable to your `.bashrc` file.
@@ -102,10 +98,6 @@ This study introduces a novel simulation framework based on the Discrete Elastic
   - (Optional) Verify the MKL installation:
     ```bash
     echo $MKL_DIR
-    ```
-    or 
-    ```bash
-    echo $MKLROOT
     ```
 
 - [OpenGL / GLUT](https://www.opengl.org/)
