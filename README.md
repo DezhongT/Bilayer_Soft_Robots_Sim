@@ -79,13 +79,12 @@ This study introduces a novel simulation framework based on the Discrete Elastic
 - [Intel oneAPI Math Kernel Library (oneMKL)](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-download.html?operatingsystem=linux&distributions=webdownload&options=online)
   - Necessary for access to Pardiso, which is used as a sparse matrix solver.
   - Intel MKL is also used as the BLAS / LAPACK backend for Eigen.
-  - **Ubuntu**: Follow the below steps.
+  - Install via APT following the [official instruction](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-download.html?operatingsystem=linux&linux-install=apt)
+  - Check the installation version
+    By default, the installation should locate at `/opt/intel/oneapi/mkl`
     ```bash
-    cd /tmp
-    wget https://registrationcenter-download.intel.com/akdlm/irc_nas/18483/l_onemkl_p_2022.0.2.136.sh
-
-    # This runs an installer, simply follow the instructions.
-    sudo sh ./l_onemkl_p_2022.0.2.136.sh
+    export MKLROOT=/opt/intel/oneapi/mkl/2022.0.2   # for older versions
+    export MKL_DIR=/opt/intel/oneapi/mkl/2024.2     # for newer versions
     ```
   - Add one of the following to your .bashrc so that cmake can find the MKL library. Change the directory accordingly if your MKL version is different. 
    Note that older versions require setting `MKLROOT` while newer versions require `MKL_DIR`.
