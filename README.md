@@ -102,8 +102,10 @@ This study introduces a novel simulation framework based on the Discrete Elastic
 
 - [OpenGL / GLUT](https://www.opengl.org/)
   - OpenGL / GLUT is used for rendering the knot through a simple graphic.
-  - Simply install through apt package manager:
-    - **Ubuntu**: `sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev`
+  - Install via APT
+    ```bash
+    sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev`
+    ```
 
 - [Lapack](https://www.netlib.org/lapack/) (*included in MKL*)
 
