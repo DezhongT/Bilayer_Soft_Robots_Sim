@@ -26,16 +26,34 @@ This study introduces a novel simulation framework based on the Discrete Elastic
 2. Install C++ dependencies
 
 - **Note**: Some of these packages are installed to the system library for convenience. You may want to install locally to e.g., `~/.local` to avoid conflicts with system libraries. Add the `cmake` flag: `-D CMAKE_INSTALL_PREFIX=~/.local`. Then `sudo` is not required to install. You'll need to ensure subsequent builds know where to find the build libraries.
-
+- Update the package list:
+  ```bash
+  sudo apt update
+  ```
+    
 - [Eigen 3.4.0](http://eigen.tuxfamily.org/index.php?title=Main_Page)
-  - Eigen is used for various linear algebra operations.
-  - The project is built with Eigen version 3.4.0 which can be downloaded [here](https://gitlab.com/libeigen/eigen/-/releases/3.4.0). After downloading the source code, install through cmake as follows.
+  - Eigen is a C++ template library for linear algebra.
+  - Install via APT:
     ```bash
-    cd eigen-3.4.0 && mkdir build && cd build
-    cmake ..
-    sudo make install
+    sudo apt update
+    sudo apt install libeigen3-dev
     ```
+  - (Optional) Verify installation
+  ```bash
+    dpkg -s libeigen3-dev | grep Version
+  ```
 
+- LLVM
+  - Eigen is a C++ template library for linear algebra.
+  - Eigen is available in the official Ubuntu repositories, and you can install it via APT:
+    ```bash
+    sudo apt-get install llvm
+    ```
+  - (Optional) Verify installation
+  ```bash
+    llvm-config --version
+  ```
+  
 - [SymEngine](https://github.com/symengine/symengine)
   - SymEngine is used for symbolic differentiation and function generation.
   - Before installing SymEngine, LLVM is required which can be installed most easily via a package manager:
