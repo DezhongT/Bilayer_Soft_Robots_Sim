@@ -53,6 +53,7 @@ This study introduces a novel simulation framework based on the Discrete Elastic
     ```bash
     llvm-config --version
     ```
+    
 - [GMP](https://gmplib.org/)
   - GMP is a free library for arbitrary precision arithmetic, operating on signed integers, rational numbers, and floating-point numbers.
   - Install via APT:
@@ -66,7 +67,7 @@ This study introduces a novel simulation framework based on the Discrete Elastic
   
 - [SymEngine](https://github.com/symengine/symengine)
   - SymEngine is used for symbolic differentiation and function generation.
-  - Afterwards, install SymEngine from source using the following commands:
+  - Install from source:
     ```bash
     git clone https://github.com/symengine/symengine
     cd symengine && mkdir build && cd build
