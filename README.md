@@ -39,20 +39,20 @@ This study introduces a novel simulation framework based on the Discrete Elastic
     sudo apt install libeigen3-dev
     ```
   - (Optional) Verify installation
-  ```bash
-    dpkg -s libeigen3-dev | grep Version
-  ```
+    ```bash
+      dpkg -s libeigen3-dev | grep Version
+    ```
 
-- LLVM
-  - Eigen is a C++ template library for linear algebra.
-  - Eigen is available in the official Ubuntu repositories, and you can install it via APT:
+- [LLVM](https://releases.llvm.org/download.html)
+  - LLVM is a collection of tools for building compilers and optimizing code.
+  - Install via APT:
     ```bash
     sudo apt-get install llvm
     ```
   - (Optional) Verify installation
-  ```bash
-    llvm-config --version
-  ```
+    ```bash
+      llvm-config --version
+    ```
   
 - [SymEngine](https://github.com/symengine/symengine)
   - SymEngine is used for symbolic differentiation and function generation.
