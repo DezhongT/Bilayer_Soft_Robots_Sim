@@ -1,6 +1,6 @@
 # A Virtual Playground for the Bilayer Soft Robotics
 
-### [Paper]() | [Video](https://github.com/DezhongT/Bilayer_Soft_Robots_Sim/blob/main/assets/videos/demo.mp4)
+### [Paper](https://arxiv.org/abs/2502.00714) | [Video](https://github.com/DezhongT/Bilayer_Soft_Robots_Sim/blob/main/assets/videos/demo.mp4)
 
 ## Overview
 
@@ -140,5 +140,10 @@ This study introduces a novel simulation framework based on the Discrete Elastic
 ### Citation
 If our work has helped your research, please cite the following paper.
 ```
-
+@article{li2025harnessing,
+  title={Harnessing Discrete Differential Geometry: A Virtual Playground for the Bilayer Soft Robotics},
+  author={Li, Jiahao and Tong, Dezhong and Hao, Zhuonan and Zhu, Yinbo and Wu, Hengan and Liu, Mingchao and Huang, Weicheng},
+  journal={arXiv preprint arXiv:2502.00714},
+  year={2025}
+}
 ```
