@@ -40,7 +40,7 @@ This study introduces a novel simulation framework based on the Discrete Elastic
     ```
   - (Optional) Verify installation
     ```bash
-      dpkg -s libeigen3-dev | grep Version
+    dpkg -s libeigen3-dev | grep Version
     ```
 
 - [LLVM](https://releases.llvm.org/download.html)
@@ -51,13 +51,21 @@ This study introduces a novel simulation framework based on the Discrete Elastic
     ```
   - (Optional) Verify installation
     ```bash
-      llvm-config --version
+    llvm-config --version
+    ```
+- [GMP](https://gmplib.org/)
+  - GMP is a free library for arbitrary precision arithmetic, operating on signed integers, rational numbers, and floating-point numbers.
+  - Install via APT:
+    ```bash
+    sudo apt install libgmp-dev
+    ```
+  - (Optional) Verify installation
+    ```bash
+    dpkg -l | grep libgmp
     ```
   
 - [SymEngine](https://github.com/symengine/symengine)
   - SymEngine is used for symbolic differentiation and function generation.
-  - Before installing SymEngine, LLVM is required which can be installed most easily via a package manager:
-    - **Ubuntu**: `sudo apt-get install llvm`
   - Afterwards, install SymEngine from source using the following commands:
     ```bash
     git clone https://github.com/symengine/symengine
