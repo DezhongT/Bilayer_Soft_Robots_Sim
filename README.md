@@ -81,11 +81,19 @@ This study introduces a novel simulation framework based on the Discrete Elastic
   - Intel MKL is also used as the BLAS / LAPACK backend for Eigen.
   - Install via APT following the [official instruction](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-download.html?operatingsystem=linux&linux-install=apt)
   - Check the installation version
-    By default, the installation should locate at `/opt/intel/oneapi/mkl`
+    By default, the installation directory path should be at `/opt/intel/oneapi/mkl`
+    Look for the folder named `mkl`, for example:
+    `/opt/intel/oneapi/mkl/2025.0`
+  - Set the MKL environment variable:
     ```bash
     export MKLROOT=/opt/intel/oneapi/mkl/2022.0.2   # for older versions
-    export MKL_DIR=/opt/intel/oneapi/mkl/2024.2     # for newer versions
     ```
+    or
+    ```bash
+    export MKL_DIR=/opt/intel/oneapi/mkl/2025.0     # for newer versions
+    ```
+  - Add corresponding environment variable to your `.bashrc` file.
+
   - Add one of the following to your .bashrc so that cmake can find the MKL library. Change the directory accordingly if your MKL version is different. 
    Note that older versions require setting `MKLROOT` while newer versions require `MKL_DIR`.
    You can find out which one from the cmake error message.
